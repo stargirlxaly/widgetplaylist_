@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'Pixel';
+  src: url(PixelifySans-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Pixel";
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main{
+  width: 440px;             
+  border-radius: 40px;
+  position: relative;        
+  box-sizing: border-box;
+}
+
+
+
+.Topic {
+  background-color: rgb(255, 220, 228);
+  margin-bottom: 10px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Topic p {
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+.pic img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.rec{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.control{
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 0;
+}
+
+.control button{
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+.control button img {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.control button:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.1);
+}
+
+
+.Time{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pic img {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.pic img.fade {
+  opacity: 0;
+}
+.pic img.blink {
+  animation: blink 2.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+
+  background-image: url("./pics/bg.jpg");
+  background-size: cover;       
+  background-position: center;   
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+.Name {
+  font-size: 20px;
+  border-radius: 20px;
+  margin-top: -20px;
+  background-color: rgb(255, 220, 228);
+  color: rgb(0, 0, 0);
+}
+.Name p {
+  margin-left: 10%;
+}
+.main {
+  -webkit-app-region: drag;
+}
+
+button, input, img {
+  -webkit-app-region: no-drag;
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  /* background: white; */
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+
+
+
+
+
